@@ -52,7 +52,7 @@ app.post("/api/v2/user", (request,response)=>{
     users.push(request.body);
     response.send(JSON.stringify(request.body));
 });
-app.get("/api/v2/user", (request,response)=>{
+app.get("/api/v2/user", (request, response)=>{
     response.send(JSON.stringify(users));
 });
 app.get("/api/v2/user/calculateDeath/:endWorld",(request,response)=>{
