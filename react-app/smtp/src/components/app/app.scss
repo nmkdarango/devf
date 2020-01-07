@@ -1,0 +1,25 @@
+html, body, #main{
+    height:100vh;
+}
+
+header{
+    width:100%;
+}
+main{
+    height: calc(100% - 110px);
+    padding-top:30px;
+    overflow: auto;
+}
+footer{
+    width:100%;
+    background: #333;
+    color:white;
+    padding:15px;
+}
+.navbar-light .navbar-nav .nav-link.active{
+    background-color:#b9b9b9;
+    border-radius:4px;
+}
+.actions{
+    margin-bottom:15px;
+}

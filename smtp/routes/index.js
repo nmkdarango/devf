@@ -5,13 +5,13 @@ const router = express.Router();
 const smtpController = require('../controllers/smtpController');
 const userController = require('../controllers/userController');
 
+router.post("/smtp/create/:id", smtpController.smtpCreate);
+router.delete("/smtp/delete/:id", smtpController.smtpDelete);
+router.put("/smtp/setPassword/:id", smtpController.smtpModifyPassword);
+
 //Mi primer middleWare
 const {validateToken} = require('../middleware/validations');
 
-router.get("/smtp/getAll", smtpController.smtpAll);
-router.post("/smtp/create", smtpController.smtpCreate);
-router.delete("/smtp/delete/:id", smtpController.smtpDelete);
-router.put("/smtp/setPassword/:id", smtpController.smtpModifyPassword);
 
 
 //Login

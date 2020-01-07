@@ -1,15 +1,8 @@
-const {resolverSmtpAll, resolverSmtpCreate,resolverModifyPassword, resolverSmtpDelete} = require('./resolvers/smtpResolver');
+const { resolverSmtpCreate,resolverModifyPassword, resolverSmtpDelete} = require('./resolvers/smtpResolver');
 
 module.exports = {
-    smtpAll: (req, res) => {
-        resolverSmtpAll().then((smtps) => {
-            res.status(200).send(smtps);
-        }).catch((err) => {
-            res.status(404).send(err);
-        });
-    },
     smtpCreate:(req, res) =>{
-        resolverSmtpCreate(req.body).then((smtp) => {
+        resolverSmtpCreate(req.parms.id, req.body).then((smtp) => {
             smtp.password = "******";
             res.status(201).send(smtp);
         }).catch((err) => {

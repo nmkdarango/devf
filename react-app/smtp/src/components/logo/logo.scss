@@ -1,0 +1,49 @@
+.logo{
+    font-size: 13px;
+    .symbol{
+        font-size: 300%;
+        line-height: 1;
+        .colorize {
+            font-size: 120%;
+            font-weight: bold;
+            background-color: #b9b9b9;
+            border-right: 4px solid #929292;
+            padding-left:6px;
+            padding-right: 6px;
+            animation: color-me-in 50s infinite;
+          
+          
+          }
+          
+         
+    }
+    .description{
+        margin-left: 10px;
+    }
+}
+@keyframes color-me-in {
+    /* You could think of as "step 1" */
+    0% {
+        color: orange;
+    }
+    5% {
+        color: red;
+    }
+    /* You could think of as "step 2" */
+    20% {
+        color: black;
+    }
+    45%{
+        color:blue;
+    }
+    50%{
+        color:white;
+    }
+    55%{
+        color: green;
+    }
+
+    100%{
+        color:orange
+    }
+}
